@@ -1,5 +1,7 @@
-export default ({
+export default {
   modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "nuxt-icon"],
+
+  css: ["~/assets/css/main.css"],
 
   content: {
     highlight: {
@@ -20,4 +22,4 @@ export default ({
   },
 
   compatibilityDate: "2024-11-21",
-});
+};

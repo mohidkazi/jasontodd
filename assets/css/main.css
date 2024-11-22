@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'giarek';
+  src: url('/assets/fonts/giarek.woff2') format('woff2'),
+  url('/assets/fonts/giarek.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  /* font-display: swap; */
+}
