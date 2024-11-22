@@ -1,9 +1,8 @@
 <template>
   <main class="min-h-screen relative">
-  <hero />
-    <!-- // Remove this once you clone the template -->
-    <links />
-    <!-- // Remove this once you clone the template -->
+    <Navbar />
+    <Hero />
+    <Social />
     <section class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 overflow-hidden">
       <post v-for="post in data" :content="post" />
     </section>
@@ -12,15 +11,16 @@
 
 <script setup>
 const metaConfig = {
-  title: "Mohid",
-  description: "Lead Software Engineer.",
-  image: "https://experience.mohidkazi.com/logspot-banner.png",
+  title: "Mohid Kazi - Experience",
+  description: "Mohid kazi portfolio website to showcase experience and resume",
+  image: "https://experience.mohidkazi.com/m.png",
   url: "https://experience.mohidkazi.com",
 }
 useHead({
   title: metaConfig.title,
   meta: [
     {
+      title: metaConfig.title,
       name: "description",
       content: metaConfig.description,
       meta: [
@@ -36,6 +36,17 @@ useHead({
     },
   ],
 });
+
+useSeoMeta({
+  title: metaConfig.title,
+  ogTitle: metaConfig.title,
+  description: metaConfig.description,
+  ogDescription: metaConfig.description,
+  ogImage: metaConfig.image,
+  twitterCard: 'summary_large_image',
+})
+
+
 const { data } = await useAsyncData("feed", () =>
   queryContent("/posts").find()
 );

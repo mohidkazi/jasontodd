@@ -29,6 +29,9 @@ module.exports = {
         "Courier New",
         "monospace",
       ],
+      "sans-helv": ["Helvetica"],
+      giarek: ["Giarek"],
+      serif: ["ui-serif", "Georgia"],
     },
     extend: {
       colors: {

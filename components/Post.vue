@@ -10,7 +10,7 @@
         :label="`${content.type}`"
         class="absolute -top-6 right-0 md:static mb-4"
       />
-      <h1 v-if="content.title" class="text-xl sm:text-3xl font-bold mb-4">
+      <h1 v-if="content.title" class="text-xl sm:text-3xl font-semibold mb-4">
         {{ content.title }}
       </h1>
       <ContentRenderer :value="content" class="document" />
